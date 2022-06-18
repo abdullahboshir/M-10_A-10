@@ -1,0 +1,26 @@
+#header{
+    background-color: #041f2e;
+    color: white;
+}
+.header-container{
+    height: 60px;
+}
+
+.nav-brand{
+    margin-top: 10px;
+}
+
+.header-container ul{
+    margin-top: 8px;
+}
+
+.active-nav{
+    border-bottom: 3px solid #B4B823;
+}
+
+.nav-link a{
+    text-decoration: none;
+    padding: 5px 5px;
+    margin: 0 15px;
+    color: white;
+}
