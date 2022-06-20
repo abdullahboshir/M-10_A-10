@@ -8,6 +8,7 @@ import NotFount from "./SharedPages/NotFount/NotFount";
 import Services from "./Pages/Services/Services";
 import Header from "./SharedPages/Header/Header";
 import Footer from "./SharedPages/Footer/Footer";
+import SignUp from "./Pages/Login/SignUp";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp/>} />
         <Route path="*" element={<NotFount />} />
       </Routes>
       <Footer/>

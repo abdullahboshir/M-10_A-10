@@ -1,11 +1,12 @@
 #hero-container {
     font-family: 'Raleway', sans-serif;
     color: white;
-}
-
-.App {
     background-color: #021B2A;
 }
+
+/* .App {
+    background-color: #021B2A;
+} */
 
 .hero-details {
     display: flex;
