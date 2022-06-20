@@ -1,13 +1,16 @@
 #header{
-    background-color: #041f2e;
+    width: 100%;
     color: white;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 .header-container{
     height: 60px;
 }
 
 .nav-brand{
-    margin-top: 10px;
+    margin-top: 13px;
+    color: white;
 }
 
 .header-container ul{
@@ -15,12 +18,19 @@
 }
 
 .active-nav{
-    border-bottom: 3px solid #B4B823;
+    border-bottom: 4px solid #B4B823;
+    transition: .400s ease-in;
 }
 
 .nav-link a{
     text-decoration: none;
-    padding: 5px 5px;
-    margin: 0 15px;
+    padding: 5px 2px;
+    margin: 0 20px;
     color: white;
+}
+
+.nav-link a:hover, .inactive-nav:hover{
+    color: #B4B823;
+    border-bottom: 4px solid #B4B823;
+    transition: .400s ease-in;
 }

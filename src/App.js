@@ -2,15 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import About from "./Pages/About/About";
 import Blogs from "./Pages/Blogs/Blogs";
 import Checkout from "./Pages/Checkout/Checkout";
-import Home from "./Pages/Home/Home";
+import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import NotFount from "./SharedPages/NotFount/NotFount";
 import Services from "./Pages/Services/Services";
 import Header from "./SharedPages/Header/Header";
+import Footer from "./SharedPages/Footer/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFount />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
