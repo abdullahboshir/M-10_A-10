@@ -1,7 +1,18 @@
 import React from 'react';
-import bg from '../../images/login/bg.jpg' 
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import bg from '../../images/login/bg.jpg';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const SignUp = () => {
+const navigate = useNavigate()
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const handlesignup = event => {
         event.preventDefault()
@@ -11,6 +22,11 @@ const SignUp = () => {
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
 
+        createUserWithEmailAndPassword(email, password)
+    }
+
+    if(user){
+        navigate("/home")
     }
 
     return (
@@ -31,8 +47,10 @@ const SignUp = () => {
                     <div>
                         <input type="checkbox" required /><span>Accept the terms of Use & Privacy Policy</span>
                     </div>
-                    <input className='signUp-btn' type="submit" value="Sign Up" />
-                    <p className='pe-auto'>You have already an account? </p>
+                   <div className='register-btn'>
+                 <input className='signUp-btn' type="submit" value="Sign Up" />
+                    <Link to="/login"><p>You have already an account? </p></Link>
+                   </div>
                 </div>
             </div>
         </form>

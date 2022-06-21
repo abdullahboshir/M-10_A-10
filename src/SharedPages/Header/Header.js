@@ -1,10 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+  
     return (
         <div id='header'>
             <nav className='header-container d-flex justify-content-between ms-5 me-5'>
@@ -15,7 +21,9 @@ const Header = () => {
                         <NavLink className={({isActive}) => isActive? "active-nav": "inactive-nav"} to='/checkout'>Checkout</NavLink>
                         <NavLink className={({isActive}) => isActive? "active-nav": "inactive-nav"} to='/blogs'>Blogs</NavLink>
                         <NavLink className={({isActive}) => isActive? "active-nav": "inactive-nav"} to='/about'>About</NavLink>
-                        <NavLink className={({isActive}) => isActive? "active-nav": "inactive-nav"} to='/login'>Login</NavLink>
+                        {
+                            user?  <button className='logout-btn' onClick={() =>  signOut(auth)}>Log Out</button> :<NavLink className={({isActive}) => isActive? "active-nav": "inactive-nav"} to='/login'>Login</NavLink>
+                        }
                     </ul>
                 </div>
             </nav>

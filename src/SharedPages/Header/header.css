@@ -11,6 +11,7 @@
 .nav-brand{
     margin-top: 13px;
     color: white;
+    font-weight: 700px;
 }
 
 .header-container ul{
@@ -18,9 +19,10 @@
 }
 
 .active-nav{
-    border-bottom: 4px solid #B4B823;
+    border-bottom: 4px solid #1dd49a;
     transition: .400s ease-in;
 }
+
 
 .nav-link a{
     text-decoration: none;
@@ -30,7 +32,20 @@
 }
 
 .nav-link a:hover, .inactive-nav:hover{
-    color: #B4B823;
-    border-bottom: 4px solid #B4B823;
+    color: #1dd49a;
+    border-bottom: 4px solid #1dd49a;
     transition: .400s ease-in;
+}
+
+.logout-btn{
+    background-color: transparent;
+    color: white;
+    border: solid 1px #1dd49a;
+    /* border-radius: 5px; */
+}
+
+.logout-btn:hover{
+    background-color:#1dd49a;
+    color: white;
+    border: solid 1px #1dd49a;
 }

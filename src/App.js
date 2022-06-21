@@ -9,6 +9,7 @@ import Services from "./Pages/Services/Services";
 import Header from "./SharedPages/Header/Header";
 import Footer from "./SharedPages/Footer/Footer";
 import SignUp from "./Pages/Login/SignUp";
+import RequireAuth from "./Pages/Login/RequireAuth";
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/checkout" element={<Checkout />} />
+       <Route path="/checkout" element={
+        <RequireAuth>
+          <Checkout></Checkout>
+        </RequireAuth>
+       } />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />

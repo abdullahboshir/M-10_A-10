@@ -31,7 +31,7 @@
     padding: 20px;
     width: 350px;
     height: 430px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 
@@ -57,5 +57,27 @@
     margin-top: 10px;
     border: none;
     background-color: #fafdfd90;
+}
+
+.btn, .btn{
+    margin-top: 7px;
+}
+.login-btn input:hover, .btn-signup input:hover{
+    background-color: #fafdfdad;
+}
+
+.register-btn p, .register-btn a, .login-btn p, .login-btn a{
+    margin-top: 5px;
+    text-decoration: none;
+    color: rgb(8, 69, 167);
+}
+
+.login-btn a:hover, .register-btn a:hover{
+    text-decoration: underline;
+    color: rgb(4, 98, 250);
+}
+
+.login-btn p:hover, .register-btn p:hover{
+    color:rgb(3, 96, 246);
 }
 

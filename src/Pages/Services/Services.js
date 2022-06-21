@@ -1,9 +1,12 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
-const Services = ({place}) => {
-    const {name, img, pirce, duration} = place;
+import { Link } from "react-router-dom";
 
-    const navigate = useNavigate();
+const Services = ({place, handleBookNow}) => {
+    const {name, img, pirce, duration, id} = place;
+
+
+    // const navigate = useNavigate();
     return (
         <div className='service'>
           <div className="service-img">
@@ -13,7 +16,9 @@ const Services = ({place}) => {
           <h4>{name}</h4>
            <p>{duration}</p>
            <p><span>{pirce}</span></p>
-           <button onClick={() => navigate("/checkout")} className= "service-btn">Book Now</button>
+          <Link to="/chekcout">
+          <button onClick={() => handleBookNow(id)} className= "service-btn">Book Now</button>
+          </Link>
           </div>
         </div>
     );

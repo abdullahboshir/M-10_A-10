@@ -4,13 +4,17 @@ import PackagesServices from '../PackagesServices/PackagesServices';
 import Slider from '../Slider/Slider';
 import PlacesInfo from '../../../hooks/placesInfo';
 import Services from '../../Services/Services';
+import { useState } from 'react';
+
+
+
+
 
 const Home = () => {
     const [places, setPlaces] = PlacesInfo([]);
 
     const carouselCard = places.slice(0, 3);
     const services = places.slice(3, 9);
-
 
     return (
         <div id='hero-container'>
