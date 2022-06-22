@@ -11,6 +11,8 @@ import { useState } from 'react';
 
 
 const Home = () => {
+
+    
     const [places, setPlaces] = PlacesInfo([]);
 
     const carouselCard = places.slice(0, 3);

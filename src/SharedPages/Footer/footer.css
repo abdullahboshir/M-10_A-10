@@ -1,0 +1,30 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #27485B;
+    padding-top: 50px;
+}
+
+.footer-items, .footer-social{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.item2 p{
+    width: 150px;
+}
+
+.item, .item2{
+    width: 220px;
+}
+.footer-container hr{
+    width: 920px;
+    margin: 0 auto;
+}
+
+.footer-social{
+   flex-direction: column;
+}

@@ -6,6 +6,8 @@
 }
 .header-container{
     height: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-brand{
@@ -20,14 +22,15 @@
 
 .active-nav{
     border-bottom: 4px solid #1dd49a;
-    transition: .400s ease-in;
+    transition: .400s ease-in-out;
+    font-weight: bold;
 }
 
 
 .nav-link a{
     text-decoration: none;
     padding: 5px 2px;
-    margin: 0 20px;
+    margin: 0 25px;
     color: white;
 }
 
@@ -35,6 +38,7 @@
     color: #1dd49a;
     border-bottom: 4px solid #1dd49a;
     transition: .400s ease-in;
+    font-weight: bold;
 }
 
 .logout-btn{

@@ -48,10 +48,11 @@
     border: none;
     width: 50%; 
     background-color: #fafdfd90;
+    margin-top: 10px;
 }
 
 
-.field input, .signUp-btn, .login input{
+.field input, .checkout-btn, .login input{
     width: 100%;
     padding: 8px;
     margin-top: 10px;
@@ -62,7 +63,7 @@
 .btn, .btn{
     margin-top: 7px;
 }
-.login-btn input:hover, .btn-signup input:hover{
+.login-btn input:hover, .checkout-btn:hover{
     background-color: #fafdfdad;
 }
 
