@@ -9,7 +9,7 @@ import img3 from '../../../images/carousel-img/slider-img3.jpg';
 const Slider = () => {
     return (
         <div>
-             <div className="carousel">
+             <div className="carousel" id='slider'>
                 <Carousel>
 
                     <Carousel.Item>
