@@ -3,7 +3,7 @@ import PlacesInfo from '../../hooks/placesInfo';
 
 const Checkout = () => {
     return (
-        <form className='login-page checkout'>
+        <form className='login-page checkout' id= "checkout">
         {/* <img src={bg} alt="" /> */}
        <div className="signup-container">
            <div className='signup'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import bg from '../../images/login/bg.jpg';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 
 const SignUp = () => {
 const navigate = useNavigate()
+const [agree, setAgree] = useState(false);
 
     const [
         createUserWithEmailAndPassword,
@@ -45,10 +46,12 @@ const navigate = useNavigate()
                         <input type="password" name='confirmPassword' placeholder='Confirm Password' required />
                     </div>
                     <div>
-                        <input type="checkbox" required /><span>Accept the terms of Use & Privacy Policy</span>
+                        <input onClick={() => setAgree(!agree)} type="checkbox" required />{
+                             <span  className={`ps-2 ${agree? "" : "text-danger"}`}>Accept terms and Conditions</span>
+                        }
                     </div>
                    <div className='register-btn'>
-                 <input className='signUp-btn' type="submit" value="Sign Up" />
+                 <input disabled= {!agree} className='signUp-btn' type="submit" value="Sign Up" />
                     <Link to="/login"><p>You have already an account? </p></Link>
                    </div>
                 </div>

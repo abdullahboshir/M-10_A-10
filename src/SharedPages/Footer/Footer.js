@@ -29,6 +29,10 @@ const Footer = () => {
         navigate("/login");
     }
 
+    const homenavigate = () => {
+        navigate("/home");
+    }
+
     return (
        <footer>
         <div className="footer-container">
@@ -39,11 +43,11 @@ const Footer = () => {
                     </div>
                 <div className='item'>
                     <h5>NAVIGATION</h5>
-                    <NavLink href="#slider">Home</NavLink>
-                    <NavLink to="/checkout" onClick={checkoutNavigate}>Checkout</NavLink>
-                    <NavLink to="/blogs" onClick={blogsnavigate}>Blogs</NavLink>
-                    <NavLink to="/about" onClick={aboutnavigate}>About</NavLink>
-                    <NavLink to="/login" onClick={loginnavigate}>Login</NavLink>
+                    <NavLink to="/home" onClick={homenavigate} href= "#slider">Home</NavLink>
+                    <NavLink to="/checkout" onClick={checkoutNavigate} href= "#checkout">Checkout</NavLink>
+                    <NavLink to="/blogs" onClick={blogsnavigate} href= "#blog">Blogs</NavLink>
+                    <NavLink to="/about" onClick={aboutnavigate} href= "#about">About</NavLink>
+                    <NavLink to="/login" onClick={loginnavigate} href= "#login">Login</NavLink>
                     </div>
                 <div className='item'> 
                     <h5>COMPANY</h5>

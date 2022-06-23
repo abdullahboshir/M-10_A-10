@@ -52,7 +52,7 @@
 }
 
 
-.field input, .checkout-btn, .login input{
+.field input, .checkout-btn, .login input, .register-btn input{
     width: 100%;
     padding: 8px;
     margin-top: 10px;
@@ -63,7 +63,7 @@
 .btn, .btn{
     margin-top: 7px;
 }
-.login-btn input:hover, .checkout-btn:hover{
+.login-btn input:hover, .checkout-btn:hover, .register-btn input:hover{
     background-color: #fafdfdad;
 }
 
@@ -80,5 +80,23 @@
 
 .login-btn p:hover, .register-btn p:hover{
     color:rgb(3, 96, 246);
+}
+
+
+.login-social-container{
+    text-align: center;
+    height: 100px;
+}
+
+
+.login-social:hover{
+    margin: 15px;
+    border: 1px solid black !important;
+    color: black !important;
+    width: 37px !important;
+    height: 37px !important;
+    padding: 8px;
+    border-radius: 50%;
+    transition: .500s ease-in-out;
 }
 

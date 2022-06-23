@@ -3,7 +3,7 @@ import AccordionDatas from '../../Components/Accordion/AccordionDatas';
 
 const Blogs = () => {
     return (
-        <div>
+        <div id='blog'>
             <AccordionDatas/>
         </div>
     );
